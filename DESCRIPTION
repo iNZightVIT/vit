@@ -1,12 +1,14 @@
 Package: vit
 License: GPL-2
-Version: 1.2.2-900
+Version: 1.2.3
 Title: Visual Inference Tools
 LazyData: true
 Type: Package
-Authors@R: c(person("Garrett", "Grolemund", role = "aut",
+Authors@R: c(person("Tom", "Elliott", role = c("aut", "cre"),
+	            email = "tell029@aucklanduni.ac.nz"),
+             person("Garrett", "Grolemund", role = "aut",
                     email = "grolemund@rice.edu"),
-             person("Simon", "Potter", role = c("aut", "cre"),
+             person("Simon", "Potter", role = c("aut"),
                     email = "spot023@aucklanduni.ac.nz"),
              person("Ben", "Stevenson", role = "aut",
                     email = "bcs5@st-andrews.ac.uk"),

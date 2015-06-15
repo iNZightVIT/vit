@@ -53,15 +53,27 @@ newdevice <- function(width, height,
             newdevice(width, height, useAcinonyx = FALSE)
         } else {
             ## Check if a `.vitprofile` file exists in the current directory
-            if (".vitprofile" %in% list.files()) {
-                print("hello")
+            ps <- 12
+            dpi <- 90
+            if (".vitprofile" %in% list.files(all.files = TRUE)) {
+                try({
+                    prof <- suppressWarnings(read.table(".vitprofile"))
+                    rownames(prof) <- prof[, 1]
+                    colnames(prof) <- NULL
+                    prof <- as.data.frame(t(prof[, 2, drop = FALSE]))
+                    
+                    if (!is.null(prof$ps)) ps <- prof$ps
+                    if (!is.null(prof$dpi)) dpi <- prof$dpi
+                }, TRUE)
             }
             
             ## Acinonyx uses pixels rather than inches, convert inches to
             ## pixels to determine dims. Assume 90 dpi.
-            width.in <- round(width * 90)
-            height.in <- round(height * 90)
-            Acinonyx::idev(width = width.in, height = height.in)
+            width.in <- round(width * dpi)
+            height.in <- round(height * dpi)
+            print(c(width.in, height.in))
+            print(c(ps, dpi))
+            Acinonyx::idev(width = width.in, height = height.in, ps = ps, dpi = dpi)
         }
     } else {
         if (.Platform$OS.type != "windows" && Sys.info()["sysname"] != "Darwin")
