@@ -52,6 +52,11 @@ newdevice <- function(width, height,
                      title = "VIT Animation Compatiblity Issue")
             newdevice(width, height, useAcinonyx = FALSE)
         } else {
+            ## Check if a `.vitprofile` file exists in the current directory
+            if (".vitprofile" %in% list.files()) {
+                print("hello")
+            }
+            
             ## Acinonyx uses pixels rather than inches, convert inches to
             ## pixels to determine dims. Assume 90 dpi.
             width.in <- round(width * 90)
@@ -67,9 +72,16 @@ newdevice <- function(width, height,
 }
 ## Brings up homepage which allows the user to either run iNZight or VIT.
 iNZightVIT <- function(disposeR = FALSE) {
-                                        # With `disposeR`, we only want to set this to TRUE if they user
-                                        # opens via the icon in the standalone version, OR if they explicitly
-                                        # say so when they open the software from within R manually.
+    ## Try to test the OS to see if it is Mac, and if so, set the working directory
+    isMac <- try(gWidgets2::is_MacOSX(), TRUE)
+    if (!inherits(isMac, "try-error"))
+        if (isMac)
+            try(setwd(Sys.getenv("R_DIR")), TRUE)
+    
+    ## With `disposeR`, we only want to set this to TRUE if they user
+    ## opens via the icon in the standalone version, OR if they explicitly
+    ## say so when they open the software from within R manually.
+    
     e <- new.vit.env()
     e$disposeR <- disposeR
     e$homefun <- iNZightVIT
