@@ -71,8 +71,6 @@ newdevice <- function(width, height,
             ## pixels to determine dims. Assume 90 dpi.
             width.in <- round(width * dpi)
             height.in <- round(height * dpi)
-            print(c(width.in, height.in))
-            print(c(ps, dpi))
             Acinonyx::idev(width = width.in, height = height.in, ps = ps, dpi = dpi)
         }
     } else {
