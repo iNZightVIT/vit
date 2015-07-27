@@ -92,12 +92,15 @@ setupGUI <- function(e){
         })
 
     # Compiling elements into a menu
-    e$g.menu <- gmenu(list(File = list(Save = mSave,
-                                       Preferences = prefs,
-                                       sep = sep,
-                                       Home = mHome, Reload = mReload, "VIT Modules" = list(),
-                                       qsep = sep,
-                                       Quit = mQuit)),
+    menuList <- list(Save = mSave,
+                     Preferences = prefs,
+                     sep = sep,
+                     Home = mHome, Reload = mReload, "VIT Modules" = list(),
+                     qsep = sep,
+                     Quit = mQuit)
+    if (!"Acinonyx" %in% row.names(installed.packages()))
+        menuList["Preferences"] <- NULL
+    e$g.menu <- gmenu(list(File = menuList),
                       container = e$win)
 
     win.layout <- glayout(container = e$win, spacing = 0)
