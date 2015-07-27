@@ -26,6 +26,11 @@ setupGUI <- function(e){
     mSave <- gaction("Save Graphics", icon = "save", handler = function(...) {
                         e$specifyFileForSaving()
                      })
+
+    prefs <- gaction("Preferences ...", icon = "edit", handler = function(...) {
+                         e$updateSettings()
+                     })
+    
     sep <- list(separator = TRUE)
     mHome <- gaction("Home", icon = "home", handler = function(...) {
                      e$confirmDialog("Do you wish to return to the home menu?",
@@ -88,6 +93,7 @@ setupGUI <- function(e){
 
     # Compiling elements into a menu
     e$g.menu <- gmenu(list(File = list(Save = mSave,
+                                       Preferences = prefs,
                                        sep = sep,
                                        Home = mHome, Reload = mReload, "VIT Modules" = list(),
                                        qsep = sep,

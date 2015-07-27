@@ -343,6 +343,88 @@ new.vit.env <- function() {
         }
     }
 
+    ## Reading the settings lists:
+    e$updateSettings <- function() {
+        ## Defaults:
+        ps <- 12
+        dpi <- 90
+        
+        ## Check for a settings file:
+        if (".vitprofile" %in% list.files(all.files = TRUE)) {
+            tt <- try({
+                prof <- suppressWarnings(read.table(".vitprofile"))
+                rownames(prof) <- prof[, 1]
+                colnames(prof) <- NULL
+                prof <- as.data.frame(t(prof[, 2, drop = FALSE]))
+                
+                if (!is.null(prof$ps)) ps <- prof$ps
+                if (!is.null(prof$dpi)) dpi <- prof$dpi
+            }, TRUE)
+        }
+
+        w <- gwindow("VIT Preferences", cont = e$window, width = 300, height = 240, visible = FALSE)
+        g <- ggroup(FALSE, spacing = 5, cont = w)
+
+        tbl <- glayout(cont = g, spacing = 0)
+
+        lbl <-
+            glabel("Use these settings to adjust the resolution of VIT graphics.\nChanges will take effect when you draw a new plot.")
+        tbl[1, 1:3] <- lbl
+
+        psVal <- gslider(from = 1, to = 20, by = 0.5, value = ps, fill = "y")
+        tbl[3, 1, anchor = c(1, -1)] <- glabel("PS ('font scale') : ")
+        tbl[3, 2:3, expand = TRUE] <- psVal
+
+        dpiVal <- gslider(from = 50, to = 300, by = 1, value = dpi, fill = "y")
+        tbl[4, 1, anchor = c(1, -1)] <- glabel("DPI ('overall scale') : ")
+        tbl[4, 2:3, expand = TRUE] <- dpiVal
+
+        addSpace(g, 10)
+        
+        hg <- ggroup(cont = g)
+        addSpring(hg)
+        cancel <- gbutton("Cancel", cont = hg, handler = function(h, ...) {
+                              dispose(w)
+                          })
+        ok <- gbutton("OK", cont = hg, handler = function(h, ...) {
+                          ps <- svalue(psVal)
+                          dpi <- svalue(dpiVal)
+                          str <- paste0("ps ", ps, "\ndpi ", dpi, "\n")
+                          add <- try(writeLines(str, con = ".vitprofile"), TRUE)
+                          if (inherits(add, "try-error")) {
+                              gmessage("VIT was unable to create a settings file. Email inzight_support@stat.auckland.ac.nz for assistance.")
+                          } else {
+                              gmessage("The preferences were saved and will be used for future graphics.")
+                          }
+                          dispose(w)
+                      })
+        
+        addSpring(g)
+
+        tbl2 <- glayout(cont = g, spacing = 0)
+        lbl <- glabel("\n\nSuggested values (NB: these are a guide only)\n")
+        font(lbl) <- list(weight = "bold", size = 8)
+        tbl2[1, 1:3] <- lbl
+
+        l1 <- glabel("Default : ")
+        l2 <- glabel("   PS = 12")
+        l3 <- glabel("DPI = 90")
+        font(l1) <- font(l2) <- font(l3) <- list(size = 8)
+        tbl2[2, 1, anchor = c(1, -1)] <- l1
+        tbl2[2, 2, anchor = c(-1, -1)] <- l2
+        tbl2[2, 3, anchor = c(-1, -1)] <- l3
+
+        l1 <- glabel("Retina Macbook Pro : ")
+        l2 <- glabel("   PS = 7")
+        l3 <- glabel("DPI = 220")
+        font(l1) <- font(l2) <- font(l3) <- list(size = 8)
+        tbl2[3, 1, anchor = c(1, -1)] <- l1
+        tbl2[3, 2, anchor = c(-1, -1)] <- l2
+        tbl2[3, 3, anchor = c(-1, -1)] <- l3
+
+        visible(w) <- TRUE
+    }
+
     e$updateData <- function() {
         names(tag(e$obj,"dataSet")) <- make.names(names(tag(e$obj,"dataSet")),
                                                   unique = TRUE)
