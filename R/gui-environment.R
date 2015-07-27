@@ -396,7 +396,11 @@ new.vit.env <- function() {
                           } else {
                               gmessage("The preferences were saved and will be used for future graphics.")
                           }
-                          dispose(w)
+                          ds <- dev.size()
+                          try(dev.off(), TRUE)
+                          newdevice(height = ds[2], width = ds[1])
+                          plot.new()
+                          dispose(w)                   
                       })
         
         addSpring(g)
