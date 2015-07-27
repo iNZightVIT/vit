@@ -2,12 +2,14 @@
 \title{Change Log for vit}
 \encoding{UTF-8}
 
-\section{Changes in version 1.2.3}{
-  Release date: TBA
+\section{Changes in version 1.2.4}{
+  Release date: 27 July 2015
   
   \subsection{NEW FEATURE/BUG FIXES}{
     \itemize{
-      \item 
+      \item Allow users to modify the \code{ps} and \code{dpi} values
+      for Acinonyx plots. This is mostly useful for Macbook Pro (retina)
+      users.
     }
   }
 }
