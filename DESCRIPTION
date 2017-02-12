@@ -24,7 +24,7 @@ Description: Traditional methods of teaching statistical inference
     mathematical and probabilistic concepts.
 Enhances: iNZight
 Depends: R (>= 2.15), RGtk2
-Imports: methods, grid, gWidgets, gWidgetsRGtk2, plyr
+Imports: methods, grid, gWidgets, gWidgetsRGtk2, plyr, iNZightTools
 Suggests: Acinonyx, png, RODBC
 Collate:
     'canvas-refclass.R'
