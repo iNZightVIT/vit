@@ -23,9 +23,20 @@ Description: Traditional methods of teaching statistical inference
     develop a student's intuitions about inference before teaching
     mathematical and probabilistic concepts.
 Enhances: iNZight
-Depends: R (>= 2.15), RGtk2
-Imports: methods, grid, gWidgets, gWidgetsRGtk2, plyr, iNZightTools
-Suggests: Acinonyx, png, RODBC
+Depends:
+    R (>= 2.15),
+    RGtk2
+Imports:
+    methods,
+    grid,
+    gWidgets,
+    gWidgetsRGtk2,
+    plyr,
+    iNZightTools
+Suggests:
+    Acinonyx,
+    png,
+    RODBC
 Collate:
     'canvas-refclass.R'
     'canvas-viewports.R'
@@ -100,3 +111,4 @@ Collate:
     'methods-sampvar-proportion-diff.R'
     'methods-sampvar-slope.R'
     'stackPoints.R'
+RoxygenNote: 5.0.1
