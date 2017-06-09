@@ -9,4 +9,3 @@ grid.ghosts(...)
 \description{
 Draw a ghosts grob
 }
-

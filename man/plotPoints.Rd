@@ -10,4 +10,3 @@ plotPoints(canvas, x, y, vp, name, black = FALSE, alpha = 1,
 \description{
 helper function for plotting numeric data
 }
-

@@ -24,4 +24,3 @@ coldatatextGrob(data, title = NULL, cols = NULL, xpos = 0.5, max = 50,
 datatextGrob constructs text of a vector of data with colours for different levels of a factor.
 datatextGrobs inherit the class "coldatatext".
 }
-

@@ -32,4 +32,3 @@ boxplotGrob(data, at = unit(0.15, "native"), height = unit(0.2, "native"),
 boxplotGrob constructs a horizontally oriented boxplot that describes a vector of data.
 To create a vertical boxplot, rotate the viewport it is drawn in. boxplotGrobs inherit the #' class "boxplot".
 }
-

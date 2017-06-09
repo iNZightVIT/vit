@@ -9,4 +9,3 @@ plotBoxplot(canvas, x, stat, stat.color, vp, name, show.w = TRUE)
 \description{
 helper function for plotting numeric data
 }
-

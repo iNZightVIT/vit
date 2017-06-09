@@ -1,5 +1,9 @@
 # Visual Inference Tools
 
+|master|dev|
+|:---|:---|
+| [![Travis-CI Build Status](https://travis-ci.org/iNZightVIT/vit.svg?branch=master)](https://travis-ci.org/iNZightVIT/vit)|[![Travis-CI Build Status](https://travis-ci.org/iNZightVIT/vit.svg?branch=dev)](https://travis-ci.org/iNZightVIT/vit)|
+
 (The VIT is distinguish to the original version of vit due to the requirement of iNZight project. We are now going to rewrite the whole package by using gWidgets2 but in the same time optimize the setting of the original ones. So this ones would be kind of a brother of vit.)
 
 It is now taking in charge by Junjie Zeng.

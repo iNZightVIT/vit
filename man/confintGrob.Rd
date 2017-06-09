@@ -23,4 +23,3 @@ confintGrob(ci, at = unit(0.15, "npc"), height = unit(0.01, "npc"),
 datatextGrob constructs text of a vector of data.
 datatextGrobs inherit the class "confint".
 }
-

@@ -9,4 +9,3 @@ dropPoints1d(canvas, n.steps, n.slow, keep.plot, move = TRUE)
 \description{
 Animates a sample of points dropping down from the collection of points in the data window. The ANIMATE_SAMPLE method for numeric, one dimensional data.
 }
-

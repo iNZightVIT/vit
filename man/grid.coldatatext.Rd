@@ -9,4 +9,3 @@ grid.coldatatext(...)
 \description{
 Draw a datatext grob
 }
-

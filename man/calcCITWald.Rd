@@ -11,4 +11,3 @@ calcCITWald(x, y = NULL)
 the various confidence coverage methods for CALC_STAT
 note that the percentile bootstrap methods do not perform very well. Here's the speed of makeStatDistribution when using different version of them on an original data of size 80
 }
-

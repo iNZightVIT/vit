@@ -18,4 +18,3 @@ ghostsGrob(p25, p50, p75, at = unit(0.15, "native"), height = unit(0.2,
 \description{
 a grob used to display previous boxplots as ghost boxplots
 }
-

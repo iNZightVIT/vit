@@ -22,4 +22,3 @@ datatextGrob(data, title = NULL, x = 0.5, max = 50, name = NULL,
 datatextGrob constructs text of a vector of data.
 datatextGrobs inherit the class "datatext".
 }
-

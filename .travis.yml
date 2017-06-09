@@ -1,0 +1,24 @@
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+
+language: R
+sudo: false
+cache: packages
+
+r:
+  - 3.2.3
+  - release
+  - devel
+
+repos:
+  docker: http://r.docker.stat.auckland.ac.nz/R
+
+addons:
+  - apt:
+    - packages:
+	  - r-cran-rgtk2
+	  - r-cran-cairodevice
+	  
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start

@@ -38,4 +38,3 @@ equidist: a logical value indicating whether or not break points are equidistant
 histGrob constructs a histogram of a vector of data.
 histGrobs inherit the class "hist".
 }
-

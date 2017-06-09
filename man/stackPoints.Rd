@@ -10,4 +10,3 @@ stackPoints(x, levels = rep(1, length(x)), vp, y.min = 0.3,
 \description{
 Calculates y values for a vector of overlapping x values. Y values are designed to prevent overlapping by creating the appearance of stacked data. A helper function for numeric 1d Data. Also used for 2d data where one dimension is numeric, and one is categorical.
 }
-
