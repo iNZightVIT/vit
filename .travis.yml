@@ -15,8 +15,8 @@ repos:
 addons:
   - apt:
     - packages:
-	  - r-cran-rgtk2
-	  - r-cran-cairodevice
+       - r-cran-rgtk2
+       - r-cran-cairodevice
 	  
 before_script:
   - "export DISPLAY=:99.0"
