@@ -14,6 +14,7 @@ repos:
 
 addons:
   - apt_packages:
+    - xvfb
     - libgdal-dev
     - libproj-dev
     - libcurl4-openssl-dev
