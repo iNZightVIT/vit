@@ -1,7 +1,7 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-sudo: required
+sudo: false
 cache: packages
 
 r:
@@ -14,16 +14,17 @@ repos:
 
 addons:
   - apt:
-    - packages:
-      - xvfb
-      - libgdal-dev
-      - libproj-dev
-      - libcurl4-openssl-dev
-      - libgtk-3-dev
-      - libcairo2-dev
+    - sources:
       - r-cran-rgtk2
       - r-cran-cairodevice
       - r-cran-rodbc
+    - packages:
+      - xvfb
+      - libgdal1
+      - libproj0
+      - libcurl4-openssl-dev
+      - libgtk2.0-dev
+      - libcairo2-dev
 
 before_script:
   - "export DISPLAY=:99.0"
