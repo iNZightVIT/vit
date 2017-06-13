@@ -16,11 +16,6 @@ repos:
   docker: http://r.docker.stat.auckland.ac.nz/R
 
 apt_packages:
-  - xvfb
-  - libgdal-dev
-  - libcurl4-openssl-dev
-  - libgtk2.0-dev
-  - libcairo2-dev
   - r-cran-rgtk2
   - r-cran-cairodevice
   - r-cran-rodbc
