@@ -44,4 +44,4 @@ S3method("validDetails", "kpropbar")
 
 S3method("drawDetails", "propbar")
 S3method("editDetails", "propbar")
-S3method("validDetails", "propbar"
+S3method("validDetails", "propbar")
