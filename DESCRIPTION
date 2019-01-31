@@ -1,6 +1,6 @@
 Package: vit
 License: GPL-2
-Version: 1.2.7
+Version: 1.2.7.9000
 Date: 2017-06-22
 Title: Visual Inference Tools
 LazyData: true
