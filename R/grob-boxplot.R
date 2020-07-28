@@ -66,7 +66,7 @@ setBoxplotGrob <- function(bpgt) {
                     width = unit(x[4] - x[2], "native"), height = height,
                     just = "left", gp = gpar(col = box.color), name = "box")
     pad <- convertHeight(unit(as.numeric(height)/2,
-                              attr(height, "unit")),
+                              unitType(height)),
                               "inches")
     median.line <- segmentsGrob(x0 = unit(x[3], "native"), y0 = at - pad,
                                 x1 = unit(x[3], "native"), y1 = at + pad,
