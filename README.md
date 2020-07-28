@@ -1,4 +1,6 @@
 # Visual Inference Tools
+ [![Travis-CI Build Status](https://travis-ci.org/iNZightVIT/vit.svg?branch=master)](https://travis-ci.org/iNZightVIT/vit)
+ [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
 (The VIT is distinguish to the original version of vit due to the requirement of iNZight project. We are now going to rewrite the whole package by using gWidgets2 but in the same time optimize the setting of the original ones. So this ones would be kind of a brother of vit.)
 

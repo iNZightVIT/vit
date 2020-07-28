@@ -1,0 +1,50 @@
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+
+language: R
+sudo: required
+# cache: packages
+
+r:
+  - release
+  # - 3.2.3
+  # - devel
+
+env:
+  - _R_CHECK_FORCE_SUGGESTS_=FALSE
+
+repos:
+  docker: http://r.docker.stat.auckland.ac.nz/R
+
+apt_packages:
+  - unixodbc-dev
+#   - r-cran-rgtk2
+#   - r-cran-cairodevice
+#   - r-cran-rodbc
+
+r_binary_packages:
+  - RGtk2
+  - cairoDevice
+  - RODBC
+
+
+# addons:
+#   - apt:
+#     - sources:
+#       - r-cran-rgtk2
+#       - r-cran-cairodevice
+#       - r-cran-rodbc
+#     - packages:
+#       - xvfb
+#       - libgdal1
+#       - libproj0
+#       - libcurl4-openssl-dev
+#       - libgtk2.0-dev
+#       - libcairo2-dev
+
+before_install:
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
