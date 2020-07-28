@@ -20,8 +20,7 @@ grid.ghosts <- function(...){
 
 
 drawDetails.ghosts <- function(x, recording){
-pad <- convertHeight(unit(as.numeric(x$height)/2, attr(x$height, "unit")),
-"native")
+pad <- convertHeight(unit(as.numeric(x$height)/2, unitType(x$height)), "native")
 
 grid.rect(x = unit(x$p25, "native"), y = x$at,
           width = unit(x$p75 - x$p25, "native"), height = x$height,
