@@ -57,6 +57,9 @@ setBoxplotGrob <- function(bpgt) {
                                     gp = gpar(col = box.color),
                                     name = "whisker.high")
     }
+    
+    print(height)
+    print(attr(height, "unit"))
 
     box <- rectGrob(x = unit(x[2], "native"), y = at,
                     width = unit(x[4] - x[2], "native"), height = height,
