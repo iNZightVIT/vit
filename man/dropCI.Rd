@@ -9,4 +9,3 @@ dropCI(canvas, e, n.steps)
 \description{
 confidence coverage method for ANIMATE_STAT
 }
-

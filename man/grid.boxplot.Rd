@@ -9,4 +9,3 @@ grid.boxplot(...)
 \description{
 Draw a boxplot grob
 }
-

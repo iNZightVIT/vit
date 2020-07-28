@@ -9,4 +9,3 @@ vpNumber(vp)
 \description{
 returns the number at the end of the viewport name
 }
-

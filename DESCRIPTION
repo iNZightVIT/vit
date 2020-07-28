@@ -111,4 +111,4 @@ Collate:
     'methods-sampvar-proportion-diff.R'
     'methods-sampvar-slope.R'
     'stackPoints.R'
-RoxygenNote: 5.0.1
+RoxygenNote: 7.1.1

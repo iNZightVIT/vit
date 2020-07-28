@@ -11,4 +11,3 @@ appendPath(vp, n)
 appends a vpPath to include the number n on the bottommost viewport. If the
 bottom most viewport ends in a number, it replaces that number with n.
 }
-

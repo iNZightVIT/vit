@@ -9,4 +9,3 @@ CIcounter(canvas, env, cov.message = TRUE, fun = mean)
 \description{
 confidence coverage method for DISPLAY_RESULT
 }
-

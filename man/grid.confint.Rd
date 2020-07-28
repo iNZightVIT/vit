@@ -9,4 +9,3 @@ grid.confint(...)
 \description{
 Draw a ci grob
 }
-
