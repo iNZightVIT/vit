@@ -1,7 +1,7 @@
 Package: vit
-License: GPL-3 | file LICENSE
-Version: 1.2.7
-Date: 2017-06-22
+License: GPL-2
+Version: 1.2.8
+Date: 2020-07-29
 Title: Visual Inference Tools
 LazyData: true
 Type: Package
@@ -111,4 +111,4 @@ Collate:
     'methods-sampvar-proportion-diff.R'
     'methods-sampvar-slope.R'
     'stackPoints.R'
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.1

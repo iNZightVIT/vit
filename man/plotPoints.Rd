@@ -4,8 +4,7 @@
 \alias{plotPoints}
 \title{helper function for plotting numeric data}
 \usage{
-plotPoints(canvas, x, y, vp, name, black = FALSE, alpha = 1,
-  col = "grey60")
+plotPoints(canvas, x, y, vp, name, black = FALSE, alpha = 1, col = "grey60")
 }
 \description{
 helper function for plotting numeric data

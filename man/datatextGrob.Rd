@@ -4,8 +4,16 @@
 \alias{datatextGrob}
 \title{Construct a datatext grob}
 \usage{
-datatextGrob(data, title = NULL, x = 0.5, max = 50, name = NULL,
-  gp = NULL, vp = NULL, dp = 2)
+datatextGrob(
+  data,
+  title = NULL,
+  x = 0.5,
+  max = 50,
+  name = NULL,
+  gp = NULL,
+  vp = NULL,
+  dp = 2
+)
 }
 \arguments{
 \item{data}{a numeric or character vector of data.}
