@@ -1,3 +1,5 @@
+- Fix bug introduced by R 4.0 (must now use `unitType(x)` instead of `attr(x, 'unit')`)
+
 ## vit 1.2.7
 __Release date__: 22 June 2017
 

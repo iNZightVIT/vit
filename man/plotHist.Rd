@@ -9,4 +9,3 @@ plotHist(canvas, x, vp, name, fill = "grey")
 \description{
 helper function for plotting numeric data
 }
-

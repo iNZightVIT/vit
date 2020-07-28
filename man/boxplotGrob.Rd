@@ -4,10 +4,20 @@
 \alias{boxplotGrob}
 \title{Construct a boxplot grob}
 \usage{
-boxplotGrob(data, at = unit(0.15, "native"), height = unit(0.2, "native"),
-  box.color = "lightgrey", median.color = "lightgrey", stat = NULL,
-  stat.color = "blue", show.w = TRUE, show.m = TRUE, name = NULL,
-  gp = gpar(lwd = 2), vp = NULL)
+boxplotGrob(
+  data,
+  at = unit(0.15, "native"),
+  height = unit(0.2, "native"),
+  box.color = "lightgrey",
+  median.color = "lightgrey",
+  stat = NULL,
+  stat.color = "blue",
+  show.w = TRUE,
+  show.m = TRUE,
+  name = NULL,
+  gp = gpar(lwd = 2),
+  vp = NULL
+)
 }
 \arguments{
 \item{data}{A numeric vector of data}
@@ -32,4 +42,3 @@ boxplotGrob(data, at = unit(0.15, "native"), height = unit(0.2, "native"),
 boxplotGrob constructs a horizontally oriented boxplot that describes a vector of data.
 To create a vertical boxplot, rotate the viewport it is drawn in. boxplotGrobs inherit the #' class "boxplot".
 }
-

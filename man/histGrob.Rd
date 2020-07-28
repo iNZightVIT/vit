@@ -4,9 +4,18 @@
 \alias{histGrob}
 \title{Construct a histogram grob}
 \usage{
-histGrob(data, breaks = 10, freq = FALSE, include.lowest = TRUE,
-  right = TRUE, fill = "grey", name = NULL, gp = NULL, vp = NULL,
-  max.total.height = NULL)
+histGrob(
+  data,
+  breaks = 10,
+  freq = FALSE,
+  include.lowest = TRUE,
+  right = TRUE,
+  fill = "grey",
+  name = NULL,
+  gp = NULL,
+  vp = NULL,
+  max.total.height = NULL
+)
 }
 \arguments{
 \item{data}{a numeric vector of data.}
@@ -38,4 +47,3 @@ equidist: a logical value indicating whether or not break points are equidistant
 histGrob constructs a histogram of a vector of data.
 histGrobs inherit the class "hist".
 }
-

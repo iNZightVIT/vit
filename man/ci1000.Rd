@@ -9,4 +9,3 @@ ci1000(canvas, e, fun = mean)
 \description{
 confidence coverage method for HANDLE_1000: how to display the results of 1000 bootstrap samples
 }
-

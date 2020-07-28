@@ -9,4 +9,3 @@ grid.hist(...)
 \description{
 Draw a histogram grob
 }
-

@@ -4,9 +4,19 @@
 \alias{confintGrob}
 \title{Construct a ci grob}
 \usage{
-confintGrob(ci, at = unit(0.15, "npc"), height = unit(0.01, "npc"),
-  to = unit(-2, "lines"), col = "red", bar = TRUE, cilabs = ci,
-  fix.label.pos = c(FALSE, FALSE), name = NULL, gp = NULL, vp = NULL)
+confintGrob(
+  ci,
+  at = unit(0.15, "npc"),
+  height = unit(0.01, "npc"),
+  to = unit(-2, "lines"),
+  col = "red",
+  bar = TRUE,
+  cilabs = ci,
+  fix.label.pos = c(FALSE, FALSE),
+  name = NULL,
+  gp = NULL,
+  vp = NULL
+)
 }
 \arguments{
 \item{ci}{the confidence interval to be plotted, given by a vector of length 2.}
@@ -23,4 +33,3 @@ confintGrob(ci, at = unit(0.15, "npc"), height = unit(0.01, "npc"),
 datatextGrob constructs text of a vector of data.
 datatextGrobs inherit the class "confint".
 }
-

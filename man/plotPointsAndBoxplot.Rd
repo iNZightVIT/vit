@@ -17,4 +17,3 @@ Used for displaying numeric data. Plots a group of points with a boxplot in
 the specified viewport. The points will be stacked on top of each other in an
 intelligent manner when necessary.
 }
-
