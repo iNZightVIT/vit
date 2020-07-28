@@ -2,6 +2,14 @@ is.categorical <- function(x) {
     inherits(x, c("character", "factor"))
 }
 
+unitType <- function(x, recurse = FALSE) {
+    if (getRversion() < numeric_version("4")) {
+        attr(x, "unit")
+    } else {
+        grid::unitType(x, recurse)
+    }
+}
+
 getColour <- function(index, n, c = 100, l = 65) {
     distance.table <- matrix(
         c(1, 0, 0, 0, 0, 0, 0, 0, 0,
