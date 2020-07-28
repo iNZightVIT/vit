@@ -59,7 +59,8 @@ setBoxplotGrob <- function(bpgt) {
     }
     
     print(height)
-    print(attr(height, "unit"))
+    print(attributes(height))
+    print(as.list(height))
 
     box <- rectGrob(x = unit(x[2], "native"), y = at,
                     width = unit(x[4] - x[2], "native"), height = height,
